@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { signIn } from 'next-auth/react';
 /** Components */
 import Button from '@components/Button';
 
-const Login: NextPage = () => {
+const SignIn: NextPage = () => {
   const loginHandler = () => {
     console.log('login');
+    signIn('lastfm');
   };
 
   return (
@@ -88,4 +90,4 @@ const Login: NextPage = () => {
   );
 };
 
-export default Login;
+export default SignIn;
